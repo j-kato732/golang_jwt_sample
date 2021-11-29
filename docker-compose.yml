@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    container_name: golang_app
+    build: ./
+    ports:
+      - "9000:8080"
+    volumes:
+      - ./app:/app
+    tty: true
+    stdin_open: true
